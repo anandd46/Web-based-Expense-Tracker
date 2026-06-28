@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - SmartExpense Pro</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-wrapper">
+
+  <div id="loader-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <main class="auth-card">
+    <div class="brand" style="justify-content: center; margin-bottom: 2rem;">
+      <div class="brand-logo">S</div>
+      <div class="brand-name">SmartExpense Pro</div>
+    </div>
+
+    <header class="auth-header">
+      <h2>Create Account</h2>
+      <p>Start managing your finances with AI insights</p>
+    </header>
+
+    <form id="register-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Min. 6 characters" required>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" class="form-control" placeholder="••••••••" required>
+      </div>
+
+      <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1.5rem;">
+        Register Account
+      </button>
+    </form>
+
+    <footer class="auth-footer">
+      <p>Already have an account? <a href="login.html">Log in here</a></p>
+      <div style="margin-top: 1rem;"><a href="index.html" style="color: var(--text-secondary);">&larr; Back to home</a></div>
+      <p style="margin-top: 1rem; font-size: 0.75rem; color: var(--text-secondary); font-weight: 500;">Designed By Anand D</p>
+    </footer>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

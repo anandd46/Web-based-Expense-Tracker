@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - SmartExpense Pro</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="loader-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">S</div>
+        <div class="brand-name">SmartExpense</div>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="dashboard.html">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+              Dashboard
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="expenses.html">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Expenses
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="income.html">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              Income
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="analytics.html">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 3.055A9.003 9.003 0 1020.945 13H11V3.055z"/><path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+              Analytics
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="reports.html">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              Reports
+            </a>
+          </li>
+          <li class="nav-item active admin-link">
+            <a href="admin.html">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              Admin Control
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="sidebar-user">
+        <div class="user-avatar">U</div>
+        <div class="user-info">
+          <div class="user-name">User Name</div>
+          <div class="user-role">User</div>
+        </div>
+        <button class="logout-btn" id="logout-trigger" title="Log Out">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Workspace Content -->
+    <main class="main-content">
+      
+      <header class="content-header">
+        <button class="hamburger-btn">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <div class="header-title">
+          <h1>Admin Control Panel</h1>
+          <p>System metrics, user directory registries and overall statistics</p>
+        </div>
+        <div class="header-actions">
+          <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Platform aggregates cards -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-title">Platform Users</span>
+          <div class="stat-value" id="sys-total-users">0</div>
+          <div class="stat-desc">Overall registrations</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-title">Administrators</span>
+          <div class="stat-value" id="sys-admins">0</div>
+          <div class="stat-desc">Security accounts</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-title">Regular Users</span>
+          <div class="stat-value" id="sys-regular-users">0</div>
+          <div class="stat-desc">Standard accounts</div>
+        </div>
+      </section>
+
+      <section class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-title">Total System Incomes</span>
+          <div class="stat-value" id="sys-total-income" style="color: var(--success);">₹0.00</div>
+          <div class="stat-desc">Overall platform deposits</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-title">Total System Expenses</span>
+          <div class="stat-value" id="sys-total-expenses" style="color: var(--danger);">₹0.00</div>
+          <div class="stat-desc">Overall platform spendings</div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-title">Avg Expense Amount</span>
+          <div class="stat-value" id="sys-avg-expense" style="color: var(--primary);">₹0.00</div>
+          <div class="stat-desc">Overall system per ticket</div>
+        </div>
+      </section>
+
+      <!-- Dashboard grid containing Users list and category overall averages -->
+      <div class="dashboard-grid">
+        
+        <!-- User registries -->
+        <div class="dashboard-card">
+          <div class="card-title">Registered Users Directory</div>
+          <div class="table-responsive">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Registered</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="users-list-tbody">
+                <tr>
+                  <td colspan="5" style="text-align: center;">Loading users directory...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Category platform ledger distribution averages -->
+        <div class="dashboard-card">
+          <div class="card-title">Category Platform Averages</div>
+          <div class="table-responsive">
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Count</th>
+                  <th>Total Spent</th>
+                </tr>
+              </thead>
+              <tbody id="sys-distribution-tbody">
+                <tr>
+                  <td colspan="3" style="text-align: center;">Loading distribution data...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <footer style="margin-top: 3rem; border-top: 1px solid var(--card-border); padding-top: 1.5rem; text-align: center; font-size: 0.85rem; color: var(--text-secondary);">
+        <p>&copy; 2026 SmartExpense Pro. All rights reserved. &bull; Designed By Anand D</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

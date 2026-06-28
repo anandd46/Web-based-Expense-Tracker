@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartExpense Pro - AI Powered Personal Finance Management System</title>
+  <meta name="description" content="Manage your personal finance, analyze categories, forecast budget, and aggregate transactions with local AI category predictions.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-wrapper">
+  
+  <div id="loader-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <main class="auth-card" style="max-width: 600px; text-align: center; border-color: var(--primary-glow);">
+    <div class="brand" style="justify-content: center; margin-bottom: 2rem;">
+      <div class="brand-logo">S</div>
+      <div class="brand-name" style="font-size: 1.6rem;">SmartExpense Pro</div>
+    </div>
+    
+    <header class="auth-header">
+      <h2>AI-Powered Personal Finance Management</h2>
+      <p style="margin-top: 1rem; line-height: 1.6; font-size: 1rem;">
+        Take control of your spending habits with enterprise-grade transaction mapping, real-time analytics dashboards, PDF statements exports, and local machine learning predictions.
+      </p>
+    </header>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; text-align: left;">
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--card-border); padding: 1rem; border-radius: 12px;">
+        <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">✦ AI Predictions</h4>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">Autofill categories instantly based on your transaction merchant title inputs.</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--card-border); padding: 1rem; border-radius: 12px;">
+        <h4 style="color: var(--success); margin-bottom: 0.5rem;">✦ Rich Analytics</h4>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">Visualize category ratios, monthly net balances, and savings trends with interactive charts.</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--card-border); padding: 1rem; border-radius: 12px;">
+        <h4 style="color: var(--primary); margin-bottom: 0.5rem;">✦ Statement Exports</h4>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">Download filtered transaction grids dynamically in CSV or formatted PDF sheets.</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--card-border); padding: 1rem; border-radius: 12px;">
+        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">✦ Security First</h4>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">Armed with secure JWT authentication, rate limiting, and mongo injection sanitization.</p>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 1rem; justify-content: center;">
+      <a href="login.html" class="btn-primary" style="padding: 0.8rem 2rem;">Log In</a>
+      <a href="register.html" class="btn-secondary" style="padding: 0.8rem 2rem;">Register</a>
+    </div>
+
+    <footer class="auth-footer" style="margin-top: 2.5rem; font-size: 0.8rem;">
+      <p>&copy; 2026 SmartExpense Pro. Built with Node.js, Express, MongoDB Atlas & Flask AI.</p>
+      <p style="margin-top: 0.5rem; color: var(--text-secondary); font-weight: 500;">Designed By Anand D</p>
+    </footer>
+  </main>
+
+  <script src="js/api.js"></script>
+</body>
+</html>
