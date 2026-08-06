@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SmartExpense Pro – AI Powered Personal Finance Management System
 
 SmartExpense Pro is an enterprise-grade full-stack personal finance tracker and expense management platform. Built using vanilla web technologies, Node.js, MongoDB Atlas, and a local Python Flask AI microservice.
@@ -79,3 +80,8 @@ Please refer to the comprehensive guide in **[docs/guide.md](file:///E:/ANTIGRAV
 
 ## License & Showcase
 This project is built as a portfolio-ready demonstration for MCA reviews, resume portfolios, and interviews. Built under clean code practices.
+=======
+# Web-based-Expense-Tracker
+
+Web-based-Expense-Tracker
+>>>>>>> e8e0bf48794f40725912117185f878eb704243a2
